@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Button, Dropdown, Form, Input } from "semantic-ui-react";
+import { useTranslation } from "react-i18next";
 
 interface Props {
   handleNextStep: () => void;
@@ -7,12 +8,13 @@ interface Props {
 }
 
 const StepThree: React.FC<Props> = ({ handleNextStep, handlePrevStep }) => {
+  const { t } = useTranslation();
   const [duration, setDuration] = useState(1);
   return (
     <div className="Step Step2">
       <Form>
         <Form.Field>
-          <label>Payment Method</label>
+          <label>{t("paymentMethod")}</label>
           <Dropdown
             // icon={<FaAngleDown />}
             text="Actions"
@@ -38,7 +40,9 @@ const StepThree: React.FC<Props> = ({ handleNextStep, handlePrevStep }) => {
           </Dropdown>
         </Form.Field>
         <Form.Field>
-          <label>Number of Tickets {duration}</label>
+          <label>
+            {t("numberOfTickets")} {duration}
+          </label>
           <Input
             className="RangeInput"
             min={1}
@@ -52,10 +56,10 @@ const StepThree: React.FC<Props> = ({ handleNextStep, handlePrevStep }) => {
         </Form.Field>
         <Form.Field className="Buttons">
           <Button primary onClick={handlePrevStep}>
-            Prev
+            {t("prev")}
           </Button>
           <Button primary onClick={handleNextStep}>
-            Next
+            {t("next")}
           </Button>
         </Form.Field>
       </Form>

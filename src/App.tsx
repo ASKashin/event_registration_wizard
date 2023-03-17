@@ -1,15 +1,18 @@
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 // import { useFormik } from "formik";
 // import * as yup from "yup";
-import { Button, Header } from "semantic-ui-react";
+import { Header } from "semantic-ui-react";
 
 import StepOne from "./StepOne";
 import StepTwo from "./StepTwo";
 import StepThree from "./StepThree";
 import StepFour from "./StepFour";
+import SwitchLanguage from "./SwitchLanguage";
 import "./App.sass";
 
 const App = () => {
+  const { t } = useTranslation();
   const [step, setStep] = useState(1);
   const triggerNextStep = () => {
     setStep(step + 1);
@@ -42,10 +45,12 @@ const App = () => {
         return null;
     }
   };
+
   return (
     <div className="App">
       <div className="Container">
-        {step !== 4 && <Header as="h4">Please complete the form</Header>}
+        <SwitchLanguage />
+        {step !== 4 && <Header as="h4">{t("titleForm")}</Header>}
         <div className="StepContent">{stepRenderer()}</div>
       </div>
     </div>

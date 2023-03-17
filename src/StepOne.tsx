@@ -1,6 +1,6 @@
 import React from "react";
 import { Button, Form, Input } from "semantic-ui-react";
-
+import { useTranslation } from "react-i18next";
 import "./Steps.sass";
 
 interface Props {
@@ -8,11 +8,12 @@ interface Props {
 }
 
 const StepOne: React.FC<Props> = ({ handleNextStep }) => {
+  const { t } = useTranslation();
   return (
     <div className="Step Step1">
       <Form>
         <Form.Field>
-          <label>First Name</label>
+          <label>{t("firstName")}</label>
           <Input
             type="text"
             name="firstName"
@@ -29,7 +30,7 @@ const StepOne: React.FC<Props> = ({ handleNextStep }) => {
           />
         </Form.Field>
         <Form.Field>
-          <label>Last Name</label>
+          <label>{t("lastName")}</label>
           <Input
             type="text"
             name="lastName"
@@ -46,7 +47,7 @@ const StepOne: React.FC<Props> = ({ handleNextStep }) => {
           />
         </Form.Field>
         <Form.Field>
-          <label>Email</label>
+          <label>{t("email")}</label>
           <Input
             type="text"
             name="email"
@@ -63,7 +64,7 @@ const StepOne: React.FC<Props> = ({ handleNextStep }) => {
           />
         </Form.Field>
         <Form.Field>
-          <label>Age</label>
+          <label>{t("age")}</label>
           <Input
             type="text"
             name="age"
@@ -86,7 +87,7 @@ const StepOne: React.FC<Props> = ({ handleNextStep }) => {
         {/*  </p>*/}
         {/*</Form.Field>*/}
         <Form.Field className="Buttons">
-          <Button onClick={handleNextStep}>Next</Button>
+          <Button onClick={handleNextStep}>{t("next")}</Button>
         </Form.Field>
       </Form>
     </div>

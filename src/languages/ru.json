@@ -1,0 +1,16 @@
+{
+  "titleForm": "Пожалуйста, заполните форму",
+  "firstName": "Имя",
+  "lastName": "Фамилия",
+  "email": "Электронная почта",
+  "age": "Возраст",
+  "ticketType": "Тип билета",
+  "dietaryRestrictions": "Диетические ограничени",
+  "eventDate": "Дата события",
+  "paymentMethod": "Способ оплаты",
+  "numberOfTickets": "Количество билетов",
+  "congratulations": "Поздравляем!",
+  "successfullyRegistered": "Вы успешно зарегистрировались.",
+  "next": "Далее",
+  "prev": "Назад"
+}

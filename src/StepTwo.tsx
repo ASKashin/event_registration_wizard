@@ -1,6 +1,8 @@
 import React from "react";
+// @ts-ignore
 import DatePicker from "react-datepicker";
 import { Button, Dropdown, Form, Input, TextArea } from "semantic-ui-react";
+import { useTranslation } from "react-i18next";
 
 interface Props {
   handleNextStep: () => void;
@@ -8,11 +10,12 @@ interface Props {
 }
 
 const StepTwo: React.FC<Props> = ({ handleNextStep, handlePrevStep }) => {
+  const { t } = useTranslation();
   return (
     <div className="Step Step2">
       <Form>
         <Form.Field>
-          <label>Ticket Type</label>
+          <label>{t("ticketType")}</label>
           <Dropdown
             // icon={<FaAngleDown />}
             text="Actions"
@@ -38,7 +41,7 @@ const StepTwo: React.FC<Props> = ({ handleNextStep, handlePrevStep }) => {
           </Dropdown>
         </Form.Field>
         <Form.Field>
-          <label>Dietary Restrictions</label>
+          <label>{t("dietaryRestrictions")}</label>
           <TextArea
             type="text"
             name="dietary"
@@ -55,15 +58,15 @@ const StepTwo: React.FC<Props> = ({ handleNextStep, handlePrevStep }) => {
           />
         </Form.Field>
         <Form.Field>
-          <label>Event Date</label>
+          <label>{t("eventDate")}</label>
           <DatePicker />
         </Form.Field>
         <Form.Field className="Buttons">
           <Button primary onClick={handlePrevStep}>
-            Prev
+            {t("prev")}
           </Button>
           <Button primary onClick={handleNextStep}>
-            Next
+            {t("next")}
           </Button>
         </Form.Field>
       </Form>

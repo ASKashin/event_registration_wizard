@@ -1,0 +1,16 @@
+{
+  "titleForm": "Please complete the form",
+  "firstName": "First Name",
+  "lastName": "Last Name",
+  "email": "Email",
+  "age": "Age",
+  "ticketType": "Ticket Type",
+  "dietaryRestrictions": "Dietary Restrictions",
+  "eventDate": "Event Date",
+  "paymentMethod": "Payment Method",
+  "numberOfTickets": "Number of Tickets",
+  "congratulations": "Congratulations!",
+  "successfullyRegistered": "You have successfully registered.",
+  "next": "Next",
+  "prev": "Prev"
+}
