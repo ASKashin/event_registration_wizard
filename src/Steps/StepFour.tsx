@@ -8,7 +8,7 @@ interface Props {
 const StepFour: React.FC<Props> = ({ handlePrevStep }) => {
   const { t } = useTranslation();
   return (
-    <div className="Step Step1">
+    <div className="Step">
       <div className="Title">{t("congratulations")}</div>
       <div className="Lead">{t("successfullyRegistered")}</div>
       <Button primary onClick={handlePrevStep}>

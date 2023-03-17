@@ -1,7 +1,5 @@
-import React from "react";
-// @ts-ignore
-import DatePicker from "react-datepicker";
-import { Button, Dropdown, Form, Input, TextArea } from "semantic-ui-react";
+import React, { useState } from "react";
+import { Button, Dropdown, Form, Input } from "semantic-ui-react";
 import { useTranslation } from "react-i18next";
 
 interface Props {
@@ -9,13 +7,14 @@ interface Props {
   handlePrevStep: () => void;
 }
 
-const StepTwo: React.FC<Props> = ({ handleNextStep, handlePrevStep }) => {
+const StepThree: React.FC<Props> = ({ handleNextStep, handlePrevStep }) => {
   const { t } = useTranslation();
+  const [duration, setDuration] = useState(1);
   return (
-    <div className="Step Step2">
+    <div className="Step">
       <Form>
         <Form.Field>
-          <label>{t("ticketType")}</label>
+          <label>{t("paymentMethod")}</label>
           <Dropdown
             // icon={<FaAngleDown />}
             text="Actions"
@@ -41,25 +40,19 @@ const StepTwo: React.FC<Props> = ({ handleNextStep, handlePrevStep }) => {
           </Dropdown>
         </Form.Field>
         <Form.Field>
-          <label>{t("dietaryRestrictions")}</label>
-          <TextArea
-            type="text"
-            name="dietary"
-            // value={values.firstName}
-            // error={Boolean(touched.firstName && errors.firstName)}
-            // onChange={({ target: { value } }) => {
-            //   if (value.length < 20) {
-            //     setValues({
-            //       ...values,
-            //       firstName: value,
-            //     });
-            //   }
-            // }}
+          <label>
+            {t("numberOfTickets")} {duration}
+          </label>
+          <Input
+            className="RangeInput"
+            min={1}
+            max={100}
+            name="duration"
+            onChange={(e) => setDuration(Number(e.target.value))}
+            step={1}
+            type="range"
+            value={duration}
           />
-        </Form.Field>
-        <Form.Field>
-          <label>{t("eventDate")}</label>
-          <DatePicker />
         </Form.Field>
         <Form.Field className="Buttons">
           <Button primary onClick={handlePrevStep}>
@@ -74,4 +67,4 @@ const StepTwo: React.FC<Props> = ({ handleNextStep, handlePrevStep }) => {
   );
 };
 
-export default StepTwo;
+export default StepThree;

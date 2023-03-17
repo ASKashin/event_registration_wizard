@@ -4,11 +4,11 @@ import { useTranslation } from "react-i18next";
 // import * as yup from "yup";
 import { Header } from "semantic-ui-react";
 
-import StepOne from "./StepOne";
-import StepTwo from "./StepTwo";
-import StepThree from "./StepThree";
-import StepFour from "./StepFour";
-import SwitchLanguage from "./SwitchLanguage";
+import StepOne from "./Steps/StepOne";
+import StepTwo from "./Steps/StepTwo";
+import StepThree from "./Steps/StepThree";
+import StepFour from "./Steps/StepFour";
+import SwitchLanguage from "./languages/SwitchLanguage";
 import "./App.sass";
 
 const App = () => {

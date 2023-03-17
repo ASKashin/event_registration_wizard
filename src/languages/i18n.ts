@@ -1,10 +1,10 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 
-import en from "./languages/en.json";
-import ru from "./languages/ru.json";
-import fr from "./languages/fr.json";
-import de from "./languages/de.json";
+import en from "./en.json";
+import ru from "./ru.json";
+import fr from "./fr.json";
+import de from "./de.json";
 
 export const resources = {
   English: {
