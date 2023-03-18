@@ -13,5 +13,8 @@
   "congratulations": "Toutes nos félicitations!",
   "successfullyRegistered": "Vous vous êtes inscrit avec succès.",
   "next": "Suivant",
-  "prev": "Précédent"
+  "prev": "Précédent",
+  "required": "Requis",
+  "matchesLetters": "ESeules lettres sont autorisées",
+  "matchesEmail": "L'e-mail n'est pas correct"
 }

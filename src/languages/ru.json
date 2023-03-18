@@ -13,5 +13,8 @@
   "congratulations": "Поздравляем!",
   "successfullyRegistered": "Вы успешно зарегистрировались.",
   "next": "Далее",
-  "prev": "Назад"
+  "prev": "Назад",
+  "required": "Обязательное поле",
+  "matchesLetters": "Разрешены только буквы",
+  "matchesEmail": "Электронная почта нерректна"
 }

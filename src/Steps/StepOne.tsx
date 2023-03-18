@@ -10,6 +10,7 @@ interface Props {
 }
 
 const StepOne: React.FC<Props> = ({ handleNextStep }) => {
+  const { t } = useTranslation();
   const initialValues = {
     firstName: "",
     lastName: "",
@@ -22,25 +23,22 @@ const StepOne: React.FC<Props> = ({ handleNextStep }) => {
       firstName: yup
         .string()
         .trim()
-        .matches(/^[a-zA-Z ]+$/, "должно содержать только буквы")
-        .required("поле обязательно для ввода"),
+        .matches(/^[a-zA-Z ]+$/, t("matchesLetters"))
+        .required(t("required")),
       lastName: yup
         .string()
         .trim()
-        .matches(/^[a-zA-Z ]+$/, "должно содержать только буквы")
-        .required("поле обязательно для ввода"),
-      email: yup
-        .string()
-        .email("введите корректный емайл")
-        .required("поле обязательно для ввода"),
-      age: yup.string().required("поле обязательно для ввода"),
+        .matches(/^[a-zA-Z ]+$/, t("matchesLetters"))
+        .required(t("required")),
+      email: yup.string().email(t("matchesEmail")).required(t("required")),
+      age: yup.string().required(t("required")),
     }),
     onSubmit: (data) => {
       console.log(data);
       // handleNextStep();
     },
   });
-  const { t } = useTranslation();
+
   return (
     <div className="Step Step1">
       <Form onSubmit={handleSubmit}>

@@ -55,6 +55,9 @@ const StepThree: React.FC<Props> = ({ handleNextStep, handlePrevStep }) => {
             value={duration}
           />
         </Form.Field>
+        <Form.Field>
+          <Input type="file" />
+        </Form.Field>
         <Form.Field className="Buttons">
           <Button primary onClick={handlePrevStep}>
             {t("prev")}
