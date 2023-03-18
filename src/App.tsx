@@ -49,7 +49,7 @@ const App = () => {
   return (
     <div className="App">
       <div className="Container">
-        <SwitchLanguage />
+        {step !== 4 && <SwitchLanguage />}
         {step !== 4 && <Header as="h4">{t("titleForm")}</Header>}
         <div className="StepContent">{stepRenderer()}</div>
       </div>

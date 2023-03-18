@@ -9,8 +9,15 @@
   width: 500px
 
   .Container
-    height: 550px
+    height: 700px
     width: 100%
+
+    label
+      color: $gray2
+      font-size: 16px
+      font-weight: 700
+      line-height: 22px
+      margin-bottom: 8px
 
     .ui.header
       color: $primary
@@ -20,3 +27,10 @@
       line-height: 44px
       margin-bottom: 30px
       text-align: center
+
+@media only screen and (max-width: 500px)
+  .App
+    width: 100%
+
+    .Container
+      padding: 0 5px

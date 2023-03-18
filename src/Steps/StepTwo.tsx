@@ -25,17 +25,14 @@ const StepTwo: React.FC<Props> = ({ handleNextStep, handlePrevStep }) => {
           >
             <Dropdown.Menu>
               <Dropdown.Item
-                // icon={<PauseIcon />}
                 text="Pause"
                 // onClick={() => handlePauseCards.mutate(selectedItems)}
               />
               <Dropdown.Item
-                // icon={<UnPauseIcon />}
                 text="Unpause"
                 // onClick={() => handleUnpauseCards.mutate(selectedItems)}
               />
               <Dropdown.Item
-                // icon={<BlockIcon />}
                 text="Block"
                 // onClick={() => handleBlockCards.mutate(selectedItems)}
               />
@@ -44,20 +41,7 @@ const StepTwo: React.FC<Props> = ({ handleNextStep, handlePrevStep }) => {
         </Form.Field>
         <Form.Field>
           <label>{t("dietaryRestrictions")}</label>
-          <TextArea
-            type="text"
-            name="dietary"
-            // value={values.firstName}
-            // error={Boolean(touched.firstName && errors.firstName)}
-            // onChange={({ target: { value } }) => {
-            //   if (value.length < 20) {
-            //     setValues({
-            //       ...values,
-            //       firstName: value,
-            //     });
-            //   }
-            // }}
-          />
+          <TextArea type="text" name="dietary" />
         </Form.Field>
         <Form.Field>
           <label>{t("eventDate")}</label>
@@ -67,7 +51,7 @@ const StepTwo: React.FC<Props> = ({ handleNextStep, handlePrevStep }) => {
           <Button primary onClick={handlePrevStep}>
             {t("prev")}
           </Button>
-          <Button primary onClick={handleNextStep}>
+          <Button primary onClick={handleNextStep} type={"submit"}>
             {t("next")}
           </Button>
         </Form.Field>

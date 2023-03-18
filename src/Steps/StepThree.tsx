@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Button, Dropdown, Form, Input } from "semantic-ui-react";
 import { useTranslation } from "react-i18next";
+import { ReactComponent as ArrowDown } from "../images/arrow-down.svg";
 
 interface Props {
   handleNextStep: () => void;
@@ -16,7 +17,7 @@ const StepThree: React.FC<Props> = ({ handleNextStep, handlePrevStep }) => {
         <Form.Field>
           <label>{t("paymentMethod")}</label>
           <Dropdown
-            // icon={<FaAngleDown />}
+            icon={<ArrowDown />}
             text="Actions"
             // disabled={!selectedItems.length}
           >
@@ -58,7 +59,7 @@ const StepThree: React.FC<Props> = ({ handleNextStep, handlePrevStep }) => {
           <Button primary onClick={handlePrevStep}>
             {t("prev")}
           </Button>
-          <Button primary onClick={handleNextStep}>
+          <Button primary onClick={handleNextStep} type={"submit"}>
             {t("next")}
           </Button>
         </Form.Field>

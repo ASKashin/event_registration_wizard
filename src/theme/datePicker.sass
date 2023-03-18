@@ -1,0 +1,74 @@
+@import "colors"
+
+.react-datepicker-wrapper
+  height: 55px
+  width: 100%
+
+  input
+    border: 1px solid $gray4
+    font-family: 'Inter', sans-serif
+    height: 55px
+
+    &:focus
+      border: 1px solid $light-blue
+
+  .react-datepicker-ignore-onclickoutside
+    border: 1px solid $gray4
+    border-radius: 4px
+    color: $gray2
+    font-size: 16px
+    height: 55px
+    padding: 16px 24px
+    width: 100%
+
+.react-datepicker-popper
+
+  .react-datepicker
+    border: none
+    border-radius: 0
+
+    &__navigation-icon::before
+      border-color: $primary
+
+    &__navigation--previous
+      left: 150px
+      top: 3px
+
+    &__header
+      background-color: white
+      border: none
+
+    &__current-month
+      color: $primary
+      font-size: 16px
+      font-weight: 600
+      line-height: 22px
+      margin-bottom: 15px
+      text-align: left
+
+    &__day-name
+      color: $primary
+      font-size: 16px
+      font-weight: 600
+      line-height: 22px
+
+    &__day
+      border-radius: 50%
+      color: $gray2
+      font-size: 16px
+      font-weight: 500
+
+      &:hover
+        background: $primary
+        color: $white
+
+      &--outside-month
+        background-color: transparent
+        color: $gray4
+
+      &--keyboard-selected
+        background: $primary
+        color: $white
+
+    &__triangle
+      display: none

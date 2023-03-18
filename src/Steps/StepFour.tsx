@@ -11,7 +11,7 @@ const StepFour: React.FC<Props> = ({ handlePrevStep }) => {
     <div className="Step">
       <div className="Title">{t("congratulations")}</div>
       <div className="Lead">{t("successfullyRegistered")}</div>
-      <Button primary onClick={handlePrevStep}>
+      <Button primary onClick={handlePrevStep} type={"submit"}>
         {t("prev")}
       </Button>
     </div>

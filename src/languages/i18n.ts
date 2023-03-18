@@ -22,7 +22,7 @@ export const resources = {
 };
 
 i18n.use(initReactI18next).init({
-  lng: localStorage.getItem("lng") || "en",
+  lng: localStorage.getItem("lng") || "English",
   debug: false,
   resources,
   interpolation: {
