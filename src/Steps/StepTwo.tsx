@@ -1,7 +1,7 @@
 import React from "react";
-
 // @ts-ignore
 import DatePicker from "react-datepicker";
+import { TicketType } from "../api/enums";
 import { Button, Dropdown, Form, Input, TextArea } from "semantic-ui-react";
 import { useTranslation } from "react-i18next";
 import { ReactComponent as ArrowDown } from "../images/arrow-down.svg";
@@ -18,22 +18,18 @@ const StepTwo: React.FC<Props> = ({ handleNextStep, handlePrevStep }) => {
       <Form>
         <Form.Field>
           <label>{t("ticketType")}</label>
-          <Dropdown
-            icon={<ArrowDown />}
-            text="Actions"
-            // disabled={!selectedItems.length}
-          >
+          <Dropdown icon={<ArrowDown />} text="Actions">
             <Dropdown.Menu>
               <Dropdown.Item
-                text="Pause"
+                text={TicketType.VIP}
                 // onClick={() => handlePauseCards.mutate(selectedItems)}
               />
               <Dropdown.Item
-                text="Unpause"
+                text={TicketType.Economy}
                 // onClick={() => handleUnpauseCards.mutate(selectedItems)}
               />
               <Dropdown.Item
-                text="Block"
+                text={TicketType.Standard}
                 // onClick={() => handleBlockCards.mutate(selectedItems)}
               />
             </Dropdown.Menu>

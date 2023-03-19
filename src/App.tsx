@@ -21,6 +21,18 @@ const App = () => {
     setStep(step - 1);
   };
 
+  //
+  // const res = await fetch("http://localhost:3001", {
+  //   method: "POST",
+  //   body: formData,
+  // });
+  //
+  // axios.post(`"http://localhost:3001"`, { user })
+  //     .then(res => {
+  //       console.log(res);
+  //       console.log(res.data);
+  //     })
+
   const stepRenderer = () => {
     switch (step) {
       case 1:
